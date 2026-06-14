@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../static/profile.css?v=1">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile">
+      <div>
+        <label for="login">имя:</label>
+        <input type="text"placeholder="введите имя" id="name">
+    </div>
+    <div>
+        <label for="login">фамилия:</label>
+        <input type="text"placeholder="введите фамилию" id="surname">
+    </div>
+    <div>
+        <label for="login">отчество:</label>
+        <input type="text"placeholder="введите отчество" id="patronymic">
+    </div>
+    <div>
+        <label for="login">дата рождения:</label>
+        <input type="text"placeholder="введите дату рождения" id="date_of_brirth">
+    </div>
+    <div>
+        <label for="login">телефон:</label>
+        <input type="text"placeholder="введите номер телефона" id="number_on_phone">
+    </div>
+    <div>
+        <label for="email">почта:</label>
+        <input type="text"placeholder="введите ваш электронный адрес" id="email">
+    </div>
+    
+    <div>
+        <label for="login">профессия:</label>
+        <input type="text"placeholder="введите вашу профессию" id="profession">
+    </div>
+    
+    <div>
+        <label for="password">дополнительная информация:</label>
+        <input type="text"placeholder="введите дополнительную информацию о себе" id="additional">
+    </div>
+   
+    <button type="submit">Зарегистрироваться</button>
+
+
+
+    
+1) в странице профиль
+2) по имени из сессии узнать роль пользователя(sql запрос) (select role where name = username)
+3) если роль - работадатель, то кнопка показывается
+4) кнопка -  это ссылка на страницу с формой, где заполняется информация о вакансии
+5) когда форма отправляется, то информация заносится в бд(также как было с регистрацией)  
+
+     
+
+
+
+   {% if user_role=="работадатель"%}
+        <a href="{{ url_for('registar') }}">Создать вакансию</a> 
+        
+    {%endif%}
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../static/state.css">
+    <title>Document</title>
+</head>
+<body>
+
+   <div class="main">
+     <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+              <a class="nav-link" href="#">Нуждающиеся в работе</a>
+              <a class="nav-link" href="#">Сферы вакансий</a>
+            </div>
+
+   <h1>Главная</h1>
+
+   
+    <div>
+        <label for="find">поиск:</label>
+        <input type="text"placeholder="поиск" id="find">
+    </div>
+
+
+   <button>Поиск</button>
+
+
+   <div class="vacation">
+   <h2>Наши вакансии</h2>
+   </div>
+
+
+
+
+<button>Зарегистрироваться</button>
+
+<a href="{{ url_for('registar') }}">Зарегистрироваться</a>
+<a href="{{ url_for('login') }}">войти</a>
+</div>
+
+
+{% for post in posts %}
+                    <h2>категория-{{ post[1] }}</h2>
+                    <p>ссылка на фото{{ post[2] }}</p>
+                    <p>id работодателя{{ post[3] }}</p>
+                    <p>заголовок{{ post[4] }}</p>
+                    <p>содержание{{ post[5] }}</p>
+                    <p>зарлата{{ post[6] }}</p>
+{% endfor %}
+
+</body>
+</html>
+
+
+

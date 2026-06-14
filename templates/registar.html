@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../static/registar.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="registration2">
+<h1>Регистрация</h1>
+<form method="post"> 
+  
+    <div>
+        <label for="email">почта:</label>
+        <input type="text"placeholder="введите ваш электронный адрес" id="email" name = "email">
+    </div>
+    
+    <div>
+        <label for="password">пароль:</label>
+        <input type="password"placeholder="введите пароль" id="password" name="password">
+    </div>
+    
+   <div>
+        <label for="login">имя:</label>
+        <input type="text"placeholder="введите имя" id="name">
+    </div>
+    <div>
+        <label for="login">фамилия:</label>
+        <input type="text"placeholder="введите фамилию" id="surname">
+    </div>
+    <div>
+        <label for="login">отчество:</label>
+        <input type="text"placeholder="введите отчество" id="patronymic">
+    </div>
+    <div>
+        <label class = "switch"><input type="checkbox" class = "checkbox" name="checkbox"><div class = "slider"></div></label>
+        
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+
+<a href="{{ url_for('profile') }}">Профиль</a>
+    </div>
+</body>
+</html>

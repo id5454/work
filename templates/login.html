@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../static/login.css?v=1">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="registration">
+
+
+   
+    <div>
+        <label for="email">почта:</label>
+        <input type="text"placeholder="введите ваш электронный адрес" id="email">
+    </div>
+    <div>
+        <label for="login">пароль:</label>
+        <input type="text"placeholder="введите пароль" id="parol">
+    </div>
+    <div>
+        <label class = "switch"><input type="checkbox" class = "checkbox"><div class = "slider"></div></label>
+        
+    </div>
+   
+    
+    <button>Войти</button>
+
+<a href="{{ url_for('main') }}">Главная</a>
+<a href="{{ url_for('profile') }}">Войти</a>
+    </div>
+</body>
+</html>

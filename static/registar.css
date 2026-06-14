@@ -1,0 +1,51 @@
+.registration2{
+   background-color: rgb(224, 233, 111); 
+}
+   button{
+    background-color: white;
+     font-size: 25px;
+}
+h1{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+input{
+    font-size: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  border: 5px solid #000;
+  border-radius: 20px;
+  background: #fff;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 0px;
+  border-radius: 50%;
+  background: #19c93b;
+  transition: .2s;
+}
+.checkbox:not(:checked) + .slider::before {
+  transform: translateX(-40px);
+}
